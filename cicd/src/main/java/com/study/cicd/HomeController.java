@@ -15,7 +15,11 @@ public class HomeController {
     @GetMapping("/{page}")
     public String test(@PathVariable(value = "page", required = false) Integer page, Model model) {
         model.addAttribute("page", page);
-        log.info("현재 페이지는 {} 입니다.", page);
+        if (page % 2 == 1) {
+            log.info("현재 페이지는 {} 입니다.", page);
+        }else{
+            log.error("현재 페이지는 오류 페이지 입니다. {}", page);
+        }
         return "index";
     }
 }
