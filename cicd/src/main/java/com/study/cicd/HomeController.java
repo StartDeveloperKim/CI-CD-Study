@@ -19,7 +19,8 @@ public class HomeController {
             log.info("현재 페이지는 {} 입니다.", page);
         }else{
             log.error("현재 페이지는 오류 페이지 입니다. {}", page);
-        }
+        } 
+        // 수정하기
         return "index";
     }
 }
