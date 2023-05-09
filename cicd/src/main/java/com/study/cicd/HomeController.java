@@ -20,7 +20,7 @@ public class HomeController {
         }else{
             log.error("현재 페이지는 오류 페이지 입니다. {}", page);
         } 
-        // 수정하기
+        // Travis-CI 연동하기
         return "index";
     }
 }
