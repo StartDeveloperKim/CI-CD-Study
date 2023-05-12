@@ -20,7 +20,7 @@ public class HomeController {
         }else{
             log.error("현재 페이지는 오류 페이지 입니다. {}", page);
         } 
-        // Travis-CI 연동하기
+        // 깃허브 액션 연동하기
         return "index";
     }
 }
