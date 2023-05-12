@@ -49,7 +49,7 @@ jobs:
       shell: bash
     
     - name: Make zip file
-      run: zip -r ./$PROJECT_NAME.zip
+      run: zip -r ./$PROJECT_NAME.zip .         # (12)
       shell: bash
     
     - name: Configure AWS credentials
