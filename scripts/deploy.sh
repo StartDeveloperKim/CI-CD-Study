@@ -1,7 +1,7 @@
 #! /bin/bash
 
 REPOSITORY=/home/ubuntu/app/step2
-PROJECT_NAME=/build/libs
+PROJECT_NAME=zip/build/libs
 
 cd $REPOSITORY/$PROJECT_NAME
 
@@ -19,6 +19,9 @@ else
 fi
 
 echo "> 새 애플리케이션 배포"
+
+cd "$REPOSITORY"/"$PROJECT_NAME"
+pwd
 
 echo "> $JAR_NAME 실행"
 nohup java -jar *.jar &
