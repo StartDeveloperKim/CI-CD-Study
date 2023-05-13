@@ -1,7 +1,8 @@
 #! /bin/bash
 
-REPOSITORY=/home/ubuntu/app/step2
+REPOSITORY=/home/ubuntu/app/step2/zip
 PROJECT_NAME=/build/libs
+JAR_NAME=$(ls "$REPOSITORY""$PROJECT_NAME" | grep 'backend' | tail -n 1)
 
 echo "> 현재 구동 중인 애플리케이션 pid 확인"
 CURRENT_PID=$(pgrep -f .jar)
