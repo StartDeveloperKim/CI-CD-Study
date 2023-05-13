@@ -3,8 +3,6 @@
 REPOSITORY=/home/ubuntu/app/step2
 PROJECT_NAME=/build/libs
 
-cd $REPOSITORY/$PROJECT_NAME
-
 echo "> 현재 구동 중인 애플리케이션 pid 확인"
 CURRENT_PID=$(pgrep -f .jar)
 
@@ -19,6 +17,8 @@ else
 fi
 
 echo "> 새 애플리케이션 배포"
+
+cd "$REPOSITORY""$PROJECT_NAME"
 
 echo "> $JAR_NAME 실행"
 nohup java -jar *.jar &
