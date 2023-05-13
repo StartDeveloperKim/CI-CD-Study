@@ -12,6 +12,9 @@ permissions:
     group: ubuntu
 
 hooks:
+  commands:
+    pre_build:
+      - chmod +x scripts/deploy.sh
   ApplicationStart:
     - location: scripts/deploy.sh
       timeout: 60
