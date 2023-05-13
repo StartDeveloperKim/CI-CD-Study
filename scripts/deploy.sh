@@ -22,4 +22,4 @@ echo "> 새 애플리케이션 배포"
 cd "$REPOSITORY""$PROJECT_NAME"
 
 echo "> $JAR_NAME 실행"
-nohup java -jar *.jar &
+nohup java -jar *.jar 1>/dev/null 2>&1 &
