@@ -22,9 +22,6 @@ echo "> 새 애플리케이션 배포"
 cd "$REPOSITORY""$PROJECT_NAME"
 
 echo "> $JAR_NAME 실행"
-nohup java -jar \
-    -Dspring.config.location=classpath:/application.properties,classpath:/application-real.properties,/
-    *.jar 1>/dev/null 2>&1 &
 
 nohup java -jar \
     -Dspring.config.location=classpath:/application.properties,classpath:/application-real.properties,/home/ubuntu/app/step2/zip/src/main/resouces/application-oauth.properties,/home/ubuntu/app/step2/zip/src/main/resouces/application-real-db.properties \
